@@ -10,8 +10,20 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^4.2.1",
+    "@libsql/client": "^0.15.15",
+    "@nuxthub/core": "^0.10.1",
+    "@nuxthub/core-nightly": "^0.10.0-20251210-113644-c25eff9",
+    "better-sqlite3": "^12.5.0",
+    "drizzle-kit": "^0.31.8",
+    "drizzle-orm": "^0.45.1",
+    "nuxt": "^4.2.2",
+    "nuxt-auth-utils": "^0.5.25",
+    "typescript": "^5.9.3",
     "vue": "^3.5.25",
-    "vue-router": "^4.6.3"
+    "vue-router": "^4.6.3",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.2"
   }
 }
