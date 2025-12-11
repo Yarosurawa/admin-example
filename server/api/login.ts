@@ -2,15 +2,18 @@ import { z } from 'zod'
 
 const bodySchema = z.object({
     email: z.email(),
-    password: z.string(),
+    password: z.string().min(8),
 })
 
 export default defineEventHandler(async (event) => {
     const { email, password } = await readValidatedBody(event, bodySchema.parse)
 
-    if (email === 'a@a.com' && password === 'password') {
+    if (email === 'petro@a.com' && password === 'password') {
+        console.log('logged')
         await setUserSession(event, {
-            name: "Петро Порошенко"
+            user: {
+                name: "Петро Порошенко",
+            },
         })
         return {}
     }
